@@ -31,7 +31,7 @@ export class MemberService {
   }
 
   private getURL(): string {
-    return 'http://localhost:3000/member'
+    return 'membersapi.vercel.app/member'
   }
 
   private getURLWithId(id: number): string {
