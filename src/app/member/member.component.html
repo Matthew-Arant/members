@@ -1,0 +1,21 @@
+<div class="content-wrap">
+    <button mat-stroked-button color="accent" class="button child" routerLink="">
+        Back
+    </button>
+    <mat-card class="content-section" *ngIf="member$ | async as member">
+        <mat-card-header class="header">
+            {{member.firstName}} {{member.lastName}}
+        </mat-card-header>
+        <mat-card-content>
+            <div class="info child">
+                Email: {{member.email}}
+            </div>
+            <div class="info child">
+                Date of Birth: {{member.dob | date}}
+            </div>
+            <div class="info child">
+                Gender: {{member.gender | titlecase}}
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

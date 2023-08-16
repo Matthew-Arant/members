@@ -1,0 +1,17 @@
+<div class="content-wrap">
+    <div class="content-section">
+        <app-list 
+        [memberList]="memberList$ | async"
+        (memberDeleted)="deleteMember($event)"
+        (memberSelected)="selectMember($event)"
+        ></app-list>
+    </div>
+    <div class="content-section">
+        <app-detail 
+        (memberCreated)="createMember($event)"
+        (memberUpdated)="updateMember($event)"
+        (formCleared)="clearMember()"
+        [member]="selectedMember"
+        ></app-detail>
+    </div>
+</div>

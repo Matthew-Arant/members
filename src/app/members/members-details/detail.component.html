@@ -1,0 +1,40 @@
+<mat-card>
+    <form [formGroup]="memberForm" #form="ngForm" (ngSubmit)="emitSave(form.value)">
+        <mat-card-content>
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>First Name</mat-label>
+                    <input matInput type="text" placeholder="Ex. Matthew" appearence="outline" formControlName="firstName">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Last Name</mat-label>
+                    <input matInput type="text" placeholder="Ex. Arant" appearence="outline" formControlName="lastName">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" placeholder="Ex. email@email.com" appearence="outline" formControlName="email">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="dob">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-radio-group aria-label="Select an option" formControlName="gender">
+                    <mat-radio-button value="male">Male</mat-radio-button>
+                    <mat-radio-button value="female">Female</mat-radio-button>
+                    <mat-radio-button value="trany">Other</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-stroked-button type="button" color="accent" (click)="emitFormCleared()">Cancel</button>
+            <button mat-raised-button type="submit" color="primary">{{selectedMember ? 'Update': 'Save'}}</button>
+        </mat-card-actions>
+    </form>
+</mat-card>

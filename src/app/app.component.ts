@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MemberService } from './services/member-service.service';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'new-beginning';
+  showFiller = false;
+
 }
