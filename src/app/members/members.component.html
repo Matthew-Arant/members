@@ -1,12 +1,12 @@
-<div class="content-wrap">
-    <div class="content-section">
+<div class="m-3 space-y-3 lg:flex lg:space-x-3 lg:space-y-0">
+    <div class="w-full">
         <app-list 
         [memberList]="memberList$ | async"
         (memberDeleted)="deleteMember($event)"
         (memberSelected)="selectMember($event)"
         ></app-list>
     </div>
-    <div class="content-section">
+    <div class="w-full">
         <app-detail 
         (memberCreated)="createMember($event)"
         (memberUpdated)="updateMember($event)"
