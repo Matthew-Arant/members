@@ -24,14 +24,6 @@
       "email": "rex.legorium@gmail.com",
       "dob": "2000-11-02T08:00:00.000Z",
       "gender": "male"
-    },
-    {
-      "id": 3,
-      "firstName": "Victor",
-      "lastName": "Avila",
-      "email": "",
-      "dob": "",
-      "gender": ""
     }
   ]
 }

@@ -1,0 +1,28 @@
+.header {
+    font-size: 2em;
+}
+
+.info {
+    font-size: 1.5m;
+}
+
+.child {
+    margin: 1%;
+}
+
+.content-wrap {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+}
+
+.content-section {
+    width: 100%;
+    margin: 1% 5% 0% 1%;
+}
+
+.button {
+    margin: 1% 5% 0% 1%;
+    width: 10%;
+}

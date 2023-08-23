@@ -1,8 +1,8 @@
-<mat-card>
+<mat-card class="list-card">
     <mat-card-header>Member List</mat-card-header>
     <mat-card-content>
         <mat-list role="list"*ngFor="let member of memberList">
-            <mat-list-item role="listitem" class="" (click)="emitMemberSelected(member)">
+            <mat-list-item role="listitem" class="entry" (click)="emitMemberSelected(member)">
                 {{member.firstName}} {{member.lastName}}
                 <div matListItemMeta>
                     <button mat-icon-button (click)="emitMemberDeleted(member.id)">
